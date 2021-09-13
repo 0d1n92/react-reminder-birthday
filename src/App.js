@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react';
+import data from './data';
+import List from './List';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <>
+
+  <div className="container">
+      <h3>count birthday to day</h3>
+  
+    {data.map((person)=>{
+      console.log(person);
+      const {id,name,age,image}= person;
+      return <div className="person">  
+              <img src={image}></img>
+                <h4>{name}</h4>
+                <p>{age}</p>
+              </div>
+    })}
+    
+  </div>
+  </>;
 }
 
 export default App;
