@@ -1,11 +1,17 @@
 import React from 'react';
 
-const List = () => {
+const List = (props) => {
+const {people} = props;
+return people.map((person, index)=>{
   return (
-    <>
-      <h2>list component</h2>
-    </>
-  );
+    <div className="person">
+        <img src={person.image} alt={"persona" + index} />
+        <h4>{person.name}</h4>
+        <p>{person.age}</p>
+    </div>
+  )
+
+})
 };
 
 export default List;

@@ -5,11 +5,7 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className="section">
-     <main>
-      <App />
-    </main>
-    </div>
+   <App></App>
   </React.StrictMode>,
   document.getElementById('root')
 );
