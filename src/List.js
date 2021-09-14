@@ -4,10 +4,12 @@ const List = (props) => {
 const {people} = props;
 return people.map((person, index)=>{
   return (
-    <div className="person">
+    <div key={person.id} className="person">
         <img src={person.image} alt={"persona" + index} />
-        <h4>{person.name}</h4>
-        <p>{person.age}</p>
+        <div>
+          <h4>{person.name}</h4>
+          <p>{person.age}</p>
+        </div>
     </div>
   )
 
