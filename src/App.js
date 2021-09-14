@@ -7,7 +7,7 @@ function App() {
   return <>
   <main>
   <div className="section container">
-  <h3>{"compiono gli anni " + data.length}</h3>
+  <h3>{"compiono gli anni " + people.length}</h3>
      <List people={people}></List> 
       <button onClick={()=> setPeople([])}>delete</button>
   </div>
